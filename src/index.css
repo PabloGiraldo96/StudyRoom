@@ -1,0 +1,21 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to top,
+    #48cae4,
+    #61d0e7,
+    #75d6ea,
+    #87dbed,
+    #98e1f0,
+    #a2e4f2,
+    #abe7f3,
+    #b4eaf5,
+    #baecf6,
+    #bfedf7,
+    #c5eff7,
+    #caf0f8
+  );
+}
