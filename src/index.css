@@ -4,18 +4,18 @@ html {
   padding: 0;
   overflow: hidden;
   background-image: linear-gradient(
-    to top,
-    #48cae4,
-    #61d0e7,
-    #75d6ea,
-    #87dbed,
-    #98e1f0,
-    #a2e4f2,
-    #abe7f3,
-    #b4eaf5,
-    #baecf6,
-    #bfedf7,
-    #c5eff7,
-    #caf0f8
+    to bottom,
+    #645db9,
+    #574fa3,
+    #4a428e,
+    #3e357a,
+    #312966,
+    #292359,
+    #211d4c,
+    #191740,
+    #151537,
+    #11122d,
+    #0f0e24,
+    #0a091b
   );
 }
