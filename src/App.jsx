@@ -8,8 +8,8 @@ function App() {
   return (
     <Canvas
       camera={{
-        fov: 70,
-        position: [-9, 12, 9],
+        fov: 60,
+        position: [-9, 18, 9],
       }}
     >
       <ScrollControls />
