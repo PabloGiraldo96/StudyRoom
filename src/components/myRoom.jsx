@@ -9,6 +9,7 @@ import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import { useGLTF, useScroll, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
+import * as THREE from "three";
 import { ScrollTrigger } from "gsap/all";
 
 export function PCRoom(props) {
@@ -16,7 +17,8 @@ export function PCRoom(props) {
   const ref = useRef();
   const tl = useRef();
   const silla = useRef();
-  const mueble = useRef();
+  const segundero = useRef();
+  const bookOne = useRef();
   const groupRef = useRef();
   const [containerHeight, setContainerHeight] = useState(0);
 
@@ -48,14 +50,26 @@ export function PCRoom(props) {
     //  0
     //);
 
-    gsap.to(silla.current.position, {
+    gsap.from(silla.current.position, {
       z: -3,
       x: -3,
       duration: 5,
       ease: "power2.out",
     });
+    gsap.to(silla.current.position, {
+      z: 2,
+      x: 1,
+      duration: 5,
+      ease: "power2.out",
+    });
+    gsap.from(bookOne.current.position, {
+      x: 2,
+      z: 0.5,
+      duration: 5,
+      ease: "power2.out",
+    });
 
-    gsap.to(ref.current.position, {
+    gsap.from(ref.current.position, {
       y: -5,
       x: -1,
       z: 4,
@@ -64,7 +78,7 @@ export function PCRoom(props) {
     });
 
     gsap.to(ref.current.rotation, {
-      y: 5,
+      y: 2,
       duration: 15,
       ease: "power2.out",
     });
@@ -1543,6 +1557,7 @@ export function PCRoom(props) {
         <mesh
           geometry={nodes.Stunden_Cube003_4.geometry}
           material={materials["Material.011"]}
+          ref={segundero}
         />
         <mesh
           geometry={nodes.Stunden_Cube003_5.geometry}
@@ -2005,10 +2020,12 @@ export function PCRoom(props) {
         position={[-9.996, 2.98, -4.384]}
         rotation={[-0.003, 1.158, 3.137]}
         scale={[4.077, 0.574, 4.264]}
+        ref={bookOne}
       >
         <mesh
           geometry={nodes.Cube166.geometry}
           material={materials["Material.032"]}
+          ref={bookOne}
         />
         <mesh
           geometry={nodes.Cube166_1.geometry}
