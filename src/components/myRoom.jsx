@@ -63,7 +63,7 @@ export function PCRoom(props) {
       ease: "power2.out",
     });
     gsap.from(bookOne.current.position, {
-      x: 2,
+      x: 1,
       z: 0.5,
       duration: 5,
       ease: "power2.out",
