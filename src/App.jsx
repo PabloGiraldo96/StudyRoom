@@ -4,6 +4,7 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { ScrollControls } from "@react-three/drei";
 import { RoomExperience } from "./components/Experience";
+import { Spinner } from "./components/Spinner";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         position: [5, 18, 1],
       }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<Spinner />}>
         <ScrollControls />
         <RoomExperience />
       </Suspense>
